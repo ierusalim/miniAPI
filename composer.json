@@ -1,0 +1,21 @@
+{
+    "name": "ierusalim/miniAPI",
+    "description": "Description of project php-miniAPI.",
+    "authors": [
+        {
+            "name": "Alexander Jer",
+            "email": "alex@ierusalim.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ierusalim\\miniAPI\\": "src/"
+        }
+    }
+}
