@@ -12,7 +12,7 @@
 // ---- CONFIG BEGIN ----
 
 // response format ( see function api_return )
-$GLOBALS['api_ret_mode'] = 'http'; // or 'html', or 'jsonrpc1'
+$GLOBALS['api_ret_mode'] = 'http'; // or 'html', 'jsonrpc1', 'jsonrpc2'
 
 // Who can access API? Array of enabled ip
 $api_enabled_ip_arr = [
@@ -128,7 +128,7 @@ if (!empty($ret_arr['error'])) {
     die(api_error($err_code, $err_message, $err_data, $GLOBALS['api_req']['id']));
 }
 
-if(empty($ret_arr['result'])) {
+if(!isset($ret_arr['result'])) {
     // if the called API function retruns invalid (no error and no result)
     die(api_error(-32001, "Incorrect result", $ret_arr));
 }
